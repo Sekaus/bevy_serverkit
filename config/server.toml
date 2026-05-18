@@ -1,0 +1,12 @@
+[database]
+host = "localhost"
+port = 5432
+user = "postgres"
+password = "Test123"
+dbname = "postgres"
+
+[server]
+max_players = 100
+
+[world]
+save_interval_seconds = 600
