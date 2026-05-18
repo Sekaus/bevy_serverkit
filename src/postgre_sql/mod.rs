@@ -96,4 +96,16 @@ impl Database {
             Ok(None)
         }
     }
+
+    pub fn delete(&mut self, name: &str) -> Result<u64, postgres::Error> {
+        let rows_affected = self.client.execute(
+            r#"
+                DELETE FROM players
+                WHERE name = $1
+                "#,
+            &[&name],
+        )?;
+
+        Ok(rows_affected)
+    }
 }
