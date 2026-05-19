@@ -2,6 +2,11 @@
 name = "bevy_serverkit"
 version = "0.1.0"
 edition = "2024"
+autoexamples = false
+
+[[example]]
+name = "player_database"
+path = "examples/player_database.rs"
 
 [dependencies]
 bevy = "0.18.1"
